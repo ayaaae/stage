@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\arahm\OneDrive\Bureau\stage\pics\logo1.png" alt="Logo" class="logo">
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div class="text-sci">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logreg-box">
+        <div class="form-box">
+            <!--<form action="#">
+                <h2>Sign In</h2>
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"></label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="Register-link">Sign Up</a></p>
+                </div>
+            </form>
+            <div class="col">
+                <div class="card card1"></div>
+                <div class="card card2"></div>
+                <div class="card card3"></div>
+                <div class="card card4"></div>
+            </div>-->
+        </div>
+        <div class="image-container">
+            <img src="C:\Users\arahm\OneDrive\Bureau\stage\centre.png" alt="Ma photo">
+        </div>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('wallpaper.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-height:100%;
+         }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('wallpaper.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .container .content {
+            position: absolute;
+            width: 58%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            padding: 80px;
+            color: #151e5a;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .logo {
+            font-size: 2em;
+            color: #000000;
+            user-select: none;
+            margin-right: 70px;
+            height: 80px;
+            width: 100px;
+        }
+        .navigation a {
+            position: relative;
+            font-size: 1.1em;
+            color: #151e5a;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 40px;
+        }
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: #151e5a;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+        .navigation a:hover::after {
+            transform: scaleX(1);
+            color: #151e5a;
+        }
+        .navigation .btnLogin-popup {
+            width: 130px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid #151e5a;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #151e5a;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: .5s;
+        }
+        .navigation .btnLogin-popup:hover {
+            background: #151e5a;
+            color: #ffffff;
+            border: none;
+        }
+        /*.logreg-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc(100% - 58%);
+            height: 100%;
+        }
+        .logreg-box .form-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            backdrop-filter: blur(20px);
+        }
+        .form-box form {
+            width: 350px;
+            height: 500px;
+            background: transparent;
+            overflow: hidden;
+            background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/cover;
+            border-radius: 15px;
+            box-shadow: 5px 20px 50px #000000;
+            padding: 20px;
+        }
+        .form-box h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #151e5a;
+            text-align: center;
+
+        }
+        .input-box {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .input-box .icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            color: #151e5a;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #151e5a;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #151e5a;
+            background: transparent;
+        }
+        .input-box label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            font-size: 16px;
+            color: #151e5a;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .input-box input:focus + label,
+        .input-box input:valid + label {
+            top: -20px;
+            left: 0;
+            color: #5bbfc0;
+            font-size: 12px;
+        }
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .remember-forgot label {
+            font-size: 14px;
+            color: #151e5a;
+        }
+        .remember-forgot a {
+            font-size: 14px;
+            color: #151e5a;
+            text-decoration: none;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            background: #151e5a;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            outline: none;
+            transition: .5s;
+        }
+        .btn:hover {
+            background: #5bbfc0;
+        }
+        .login-register {
+            text-align: center;
+            margin-top: 15px;
+            color: #151e5a;
+        }
+        .login-register p {
+            font-size: 14px;
+        }
+        .login-register a {
+            color: #5bbfc0;
+            text-decoration: none;
+        }
+        .login-register a:hover {
+            text-decoration: underline;
+        }*/
+        .card {
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+        }
+        .card1 {
+            background-image: url(card1.jpg);
+        }
+        .card2 {
+            background-image: url(card2.jpg);
+        }
+        .card3 {
+            background-image: url(card3.jpg);
+        }
+        .card4 {
+            background-image: url(card4.jpg);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+</html>
